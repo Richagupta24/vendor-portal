@@ -1,8 +1,8 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: vendor's portal
+about: this a vendor self service portal which is convenient to vendors
 title: ''
-labels: ''
+labels: enhancement
 assignees: ''
 
 ---
