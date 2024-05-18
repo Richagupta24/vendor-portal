@@ -1,0 +1,11 @@
+
+<odoo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="wizard.xsd">
+    <record id="view_vendor_adjustment_request_wizard" model="ir.ui.view">
+        <field name="name">vendor.adjustment.request.wizard</field>
+        <field name="model">vendor.adjustment.request.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Vendor Adjustment Request Wizard">
+                <!-- Define your wizard steps here -->
+            </form>
+        

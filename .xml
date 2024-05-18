@@ -1,0 +1,37 @@
+<record id="view_vendor_forecast_list" model="ir.ui.view">
+    <field name="name">vendor.forecast.list</field>
+    <field name="model">vendor.forecast</field>
+    <field name="arch" type="xml">
+        <tree string="Vendor Forecast">
+            <field name="product_id" />
+            <field name="expected_quantity" />
+            <field name="forecast_date" />
+        </tree>
+    </field>
+</record>
+<record id="view_vendor_adjustment_request_form" model="ir.ui.view">
+    <field name="name">vendor.adjustment.request.form</field>
+    <field name="model">vendor.adjustment.request</field>
+    <field name="arch" type="xml">
+        <form string="Adjustment Request">
+            <sheet>
+                <group>
+                    <field name="order_id" />
+                    <field name="adjustment_detail" />
+                    <field name="comment" />
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+<record id="view_vendor_forecast_list_button" model="ir.ui.view">
+    <field name="name">vendor.forecast.list.button</field>
+    <field name="model">vendor.forecast</field>
+    <field name="arch" type="xml">
+        <xpath expr="//tree" position="inside">
+            <button name="action_download_report" string="Download Report" type="object" />
+        </xpath>
+    </field>
+</record>
+<menuitem id="menu_vendor_forecast" name="Forecast" action="action_vendor_forecast" />
+record id="view_vendor_adjustment_request_wizard" model="ir.ui.

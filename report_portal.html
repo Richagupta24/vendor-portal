@@ -1,0 +1,26 @@
+report_portal.xml
+<odoo>
+    <report
+        id="action_vendor_forecast_report"
+        model="vendor.forecast"
+        string="Vendor Forecast Report"
+        report_type="qweb-pdf"
+        name="module_name.report_vendor_forecast_template"
+        file="module_name.report_vendor_forecast_template"
+        from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Vendor
+from django.template import loader
+
+def vendor_xml(request):
+    vendors = Vendor.objects.all()
+    template = loader.get_template('vendors/vendor_xml.xml')
+    context = {'vendors': vendors}
+    xml_data = template.render(context)
+    return HttpResponse(xml_data, content_type='application/xml')
+
+        \></report>
+         
+         </odoo>
+
+
